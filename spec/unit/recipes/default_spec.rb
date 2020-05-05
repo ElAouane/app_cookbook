@@ -1,7 +1,7 @@
  require 'spec_helper'
 
 describe 'app_cookbook::default' do
-  context 'When all attributes are default, on Ubuntu 16.04' do
+  context 'When all attributes are default, on Ubuntu 18.04' do
     platform 'ubuntu', '18.04'
 
     it 'converges successfully' do
@@ -43,9 +43,9 @@ describe 'app_cookbook::default' do
     it "install pm2 via npm" do
       expect(chef_run).to install_nodejs_npm('pm2')
     end
-    it "install npm" do
-      expect(chef_run).to install_package "npm"
-    end
+    # it "install npm" do
+    #   expect(chef_run).to install_package("npm")
+    # end
 
   end
 end
