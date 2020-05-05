@@ -2,7 +2,7 @@
 
 describe 'app_cookbook::default' do
   context 'When all attributes are default, on Ubuntu 16.04' do
-    platform 'ubuntu', '16.04'
+    platform 'ubuntu', '18.04'
 
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
@@ -46,6 +46,6 @@ describe 'app_cookbook::default' do
     it "install npm" do
       expect(chef_run).to install_package "npm"
     end
-    
+
   end
 end
