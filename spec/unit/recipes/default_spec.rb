@@ -43,5 +43,9 @@ describe 'app_cookbook::default' do
     it "install pm2 via npm" do
       expect(chef_run).to install_nodejs_npm('pm2')
     end
+    it "install npm" do
+      expect(chef_run).to install_package "npm"
+    end
+    
   end
 end
